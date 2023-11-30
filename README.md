@@ -11,5 +11,8 @@ Bash script, uses Font Awesome 5 (or 6) Free to display icons and percentage:
 ## battery.py
 Python script, equivalent of the bash one
 
+## meteo.sh
+Bash script, uses Font Awesome 5 (or 6) Free to display icon and apparent temperature of current weather
+
 ## meteo.py
-Python script, uses Font Awesome 5 (or 6) Free to display icon and apparent temperature of current weather
+Python script, equivalent of the bash one
