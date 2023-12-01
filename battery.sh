@@ -32,5 +32,5 @@ elif [ $charging -eq 1 ]; then
 elif [ $stable -eq 1 ]; then
     echo " ${percentage_remaining}%"
 else
-    echo "No battery!"
+    echo "" # "No battery!"
 fi
