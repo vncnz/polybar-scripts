@@ -30,3 +30,5 @@ label = %output%
 label-padding = 1
 tail = true
 ```
+
+It is important to note the flag `tail = true`: the script keeps running and keeps in memory the setting about what to show, updating displayed data only when necessary (every 10 minutes by network update and every USR1/USR2 event).
