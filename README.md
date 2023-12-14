@@ -15,4 +15,17 @@ Python script, equivalent of the bash one
 Bash script, uses Font Awesome 5 (or 6) Free to display icon and apparent temperature of current weather
 
 ## meteo.py
-Python script, equivalent of the bash one
+Python script. It displays the current weather. By sending the USR1 or USR2 IPC signal, you can view forecasts. The USR1 signal increments the forecasted time, while USR2 decrements it by one hour per step. Decrementing until the present time resets the script to the current-time mode. When the forecasted time matches the current time while in forecast mode, the script automatically switches back to current-time mode.
+This is an example of polybar configuration, allowing to change the time with left and right mouse click:
+
+[module/weather]
+type = custom/script
+exec = /PATH/TO/SCRIPT/meteo.py 2>/dev/null
+click-left = "kill -USR1 $(pgrep --oldest --parent %pid%)"
+#scroll-up = "kill -USR1 $(pgrep --oldest --parent %pid%)"
+#scroll-down = "kill -USR2 $(pgrep --oldest --parent %pid%)"
+click-right = "kill -USR2 $(pgrep --oldest --parent %pid%)"
+format = <label>
+label = %output%
+label-padding = 1
+tail = true
