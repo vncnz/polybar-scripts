@@ -167,6 +167,7 @@ while running:
         # print('New net update')
         data = getWeatherData()
         if data:
+            hour.fixValue()
             meteo_data = data
             next_timestamp = datetime.now() + timedelta(minutes=10)
             with open('meteo_log.txt', 'a') as file:
